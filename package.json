@@ -50,7 +50,8 @@
         ],
         "testPathIgnorePatterns": [
           "/node_modules/",
-          "/dist/"
+          "/dist/",
+          "/e2e-tests/"
         ]
       },
       {

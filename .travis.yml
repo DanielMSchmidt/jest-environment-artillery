@@ -3,3 +3,9 @@ node_js:
   - "10"
   - "9"
   - "8"
+install:
+  - npm install
+  - cd e2e-tests && npm install && cd ..
+script:
+  - npm test
+  - cd e2e-tests && npm test && cd ..

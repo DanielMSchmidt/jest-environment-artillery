@@ -1,0 +1,15 @@
+{
+  "name": "e2e-tests",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^22.4.3"
+  }
+}
