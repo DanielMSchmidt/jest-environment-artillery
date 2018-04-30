@@ -1,0 +1,61 @@
+import NodeEnvironment from "jest-environment-node";
+export declare type Path = string;
+export declare type Glob = string;
+export interface IConstructorOptions {
+    automock?: boolean;
+    browser?: boolean;
+    cache?: boolean;
+    cacheDirectory?: Path;
+    clearMocks?: boolean;
+    coveragePathIgnorePatterns?: string[];
+    cwd?: Path;
+    detectLeaks?: boolean;
+    displayName?: string;
+    filter?: Path;
+    forceCoverageMatch?: Glob[];
+    globals?: object;
+    haste?: {
+        defaultPlatform?: string;
+        hasteImplModulePath?: string;
+        platforms?: string[];
+        providesModuleNodeModules?: string[];
+    };
+    moduleDirectories?: string[];
+    moduleFileExtensions?: string[];
+    moduleLoader?: Path;
+    moduleNameMapper?: Array<[string, string]>;
+    modulePathIgnorePatterns?: string[];
+    modulePaths?: string[];
+    name?: string;
+    resetMocks?: boolean;
+    resetModules?: boolean;
+    resolver?: Path;
+    restoreMocks?: boolean;
+    rootDir?: Path;
+    roots?: Path[];
+    runner?: string;
+    setupFiles?: Path[];
+    setupTestFrameworkScriptFile?: Path;
+    skipFilter?: boolean;
+    skipNodeResolution?: boolean;
+    snapshotSerializers?: Path[];
+    testEnvironment?: string;
+    testEnvironmentOptions?: object;
+    testMatch?: Glob[];
+    testLocationInResults?: boolean;
+    testPathIgnorePatterns?: string[];
+    testRegex?: string;
+    testRunner?: string;
+    testURL?: string;
+    timers?: "real" | "fake";
+    transform?: Array<[string, Path]>;
+    transformIgnorePatterns?: Glob[];
+    watchPathIgnorePatterns?: string[];
+    unmockedModulePathPatterns?: string[];
+}
+declare class ArtilleryEnvironment extends NodeEnvironment {
+    constructor(config: IConstructorOptions);
+    setup(): Promise<void>;
+    teardown(): Promise<void>;
+}
+export default ArtilleryEnvironment;

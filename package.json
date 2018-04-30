@@ -1,0 +1,107 @@
+{
+  "name": "jest-environment-artillery",
+  "version": "0.0.1",
+  "description": "A jest environment for running load tests on your application",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "prebuild": "rm -rf dist/",
+    "build": "tsc",
+    "pretest": "npm run build",
+    "test": "jest"
+  },
+  "author": {
+    "name": "Daniel Schmidt",
+    "email": "danielmschmidt92@gmail.com",
+    "url": "http://danielmschmidt.de"
+  },
+  "keywords": [
+    "artillery",
+    "jest",
+    "load testing",
+    "performance testing"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanielMSchmidt/jest-environment-artillery/issues"
+  },
+  "homepage": "https://github.com/DanielMSchmidt/jest-environment-artillery#readme",
+  "files": [
+    "README.md",
+    "dist/index.js",
+    "dist/index.d.ts"
+  ],
+  "prettier": {
+    "trailingComma": "all"
+  },
+  "jest": {
+    "projects": [
+      {
+        "displayName": "Jest",
+        "transform": {
+          "^.+\\.ts$": "ts-jest"
+        },
+        "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(js|ts)$",
+        "moduleFileExtensions": [
+          "ts",
+          "js",
+          "json"
+        ],
+        "testPathIgnorePatterns": [
+          "/node_modules/",
+          "/dist/"
+        ]
+      },
+      {
+        "displayName": "Prettier",
+        "runner": "jest-runner-prettier",
+        "moduleFileExtensions": [
+          "js",
+          "ts",
+          "md",
+          "json"
+        ],
+        "testMatch": [
+          "<rootDir>/src/**/*.js",
+          "<rootDir>/src/*.ts",
+          "<rootDir>/src/**/*.ts",
+          "**/*.md"
+        ]
+      },
+      {
+        "displayName": "TsLint",
+        "runner": "jest-runner-tslint",
+        "moduleFileExtensions": [
+          "ts"
+        ],
+        "testMatch": [
+          "**/*.ts"
+        ],
+        "testPathIgnorePatterns": [
+          "/node_modules/",
+          "/__tests__/",
+          "/dist/",
+          "/src/@types/"
+        ]
+      }
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "husky": "^1.0.0-rc.2",
+    "jest": "^22.4.3",
+    "jest-runner-prettier": "^0.2.3",
+    "jest-runner-tslint": "^1.0.4",
+    "ts-jest": "^22.4.4",
+    "typescript": "^2.8.3"
+  },
+  "dependencies": {
+    "jest-environment-node": "^22.4.3"
+  }
+}
