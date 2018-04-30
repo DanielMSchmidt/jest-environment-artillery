@@ -57,15 +57,23 @@ export interface IConstructorOptions {
 }
 
 class ArtilleryEnvironment extends NodeEnvironment {
+  public global: object;
+
   constructor(config: IConstructorOptions) {
     super(config);
+    const global = {};
+
+    this.global = global;
   }
   public async setup() {
     // TODO: setup per test
+    return Promise.resolve();
   }
+
   public async teardown() {
     // TODO: teardown per test
+    return Promise.resolve();
   }
 }
 
-export default ArtilleryEnvironment;
+module.exports = ArtilleryEnvironment;

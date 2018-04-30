@@ -1,4 +1,4 @@
-import JestEnvironmentArtillery from "../";
+const JestEnvironmentArtillery = require("../");
 
 describe("jest-environment-artillery", () => {
   it("exposes a constructor", () => {
