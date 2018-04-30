@@ -1,6 +1,6 @@
 {
   "name": "jest-environment-artillery",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A jest environment for running load tests on your application",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
