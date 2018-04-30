@@ -2,6 +2,14 @@
 
 A jest environment for running load tests on your application.
 
+## Status
+
+* [x] Base Setup for developig a jest environment with typescript
+* [ ] Expose `artillery` wrapper
+* [ ] Expose expectation helpers
+* [ ] Write integration tests
+* [ ] Release version `0.1.0`
+
 ## Installation
 
 * Make sure jest is set up properly
