@@ -23,6 +23,10 @@
     "performance testing"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielMSchmidt/jest-environment-artillery.git"
+  },
   "bugs": {
     "url": "https://github.com/DanielMSchmidt/jest-environment-artillery/issues"
   },
